@@ -13,7 +13,6 @@ def number_guessing_game():
         f"CONGRATULATIONS {name}!! You have guessed it Right in {attempts} attempts!"
       )
       print("Bravo!! You're the WINNER.")
-      print("PLAY AGAIN?")
       break
     elif guess < n:
       print("Your guess is Too LOW! Try again.")
@@ -21,7 +20,8 @@ def number_guessing_game():
       print("Your guess is Too High!, Try again.")
       if attempts == 10:
         print(
-          f"Game Over! You have reached the maximum number of attempts. The Guessed Number was {n}."
-        )
-        print("PLAY AGAIN?")
+          f"Game Over! You have reached the maximum number of attempts. The Guessed Number was {n}.")
+        play_again= input("Do you want to play again yes/no?")
+        if play_again.lower()!="yes":
+          break
 number_guessing_game()
